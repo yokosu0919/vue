@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cat API Sample</title>
     <script src="https://unpkg.com/vue@3.2.30"></script>
-************************************************************
+    <script src="https://unpkg.com/axios@0.23.0/dist/axios.min.js"></script>
 </head>
 <body>
     <div id="app">
@@ -23,8 +23,8 @@
             },
             methods: {
                 getRandomCatImage() {
-                    // Cat APIからランダムな猫の画像を取得
-                    axios.get('*****************************')
+                    // Cat APIからランダムな猫の画像を取得 
+                    axios.get('http://localhost:30000/cat')
                         .then((response) => {
                             this.catImage = response.data[0].url;
                         })
